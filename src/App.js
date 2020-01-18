@@ -1,10 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import './global.css';
 import './App.css';
 import './Sidebar.css';
+import './Main.css';
 
 function App() {
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        console.log(position);
+      },
+      (err) => {
+        console.log(err);
+      },
+      {
+        timeout: 30000,
+      }
+    );
+  }, [])
+  
   return (
     <>
       <div id="app">
@@ -37,7 +52,21 @@ function App() {
           </form>
         </aside>
 
-        <main></main>
+        <main>
+          <ul>
+            <li className="dev-item">
+              <header>
+                <img src="" alt="Foto no Github"/>
+                <div className="user-info">
+                  <strong></strong>
+                  <span></span>
+                </div>
+              </header>
+              <p></p>
+              <a href="">Acessar perfil no Github</a>
+            </li>
+          </ul>
+        </main>
       </div>
     </>
   );
