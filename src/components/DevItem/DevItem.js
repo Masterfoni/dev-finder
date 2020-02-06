@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './styles.css'
+import './DevItem.css'
 
 const DevItem = ({ dev: { avatar_url, name, stack, bio, github_username } }) => {
     return (

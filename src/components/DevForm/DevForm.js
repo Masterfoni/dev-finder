@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-import './styles.css'
+import './DevForm.css'
 
-const DevForm = ({ onSubmit }) => {
+export const DevForm = ({ onSubmit }) => {
     const [github_username, setGithubUsername] = useState('');
     const [stack, setStack] = useState('');
 
